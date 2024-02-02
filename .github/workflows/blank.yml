@@ -33,8 +33,5 @@ jobs:
       - name: Check docker
         run: docker info 
 
-      - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      - name: Official SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v2.0.1
